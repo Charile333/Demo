@@ -13,8 +13,7 @@ import {
   faVideo,
   faCalendar,
   faArrowUp,
-  faUsers,
-  faTrendingUp
+  faUsers
 } from '@fortawesome/free-solid-svg-icons';
 
 const EconomySocialPage = () => {

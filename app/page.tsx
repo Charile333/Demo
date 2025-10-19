@@ -349,7 +349,7 @@ function Landing() {
                   </div>
                   <Link href="/LUMI" className="mt-4 w-full py-2 bg-[#d4af37] hover:bg-[#e6c553] text-black rounded-md text-sm font-medium transition-colors flex items-center justify-center">
                     🔗 进入 LUMI
-                  </Link>
+                </Link>
             </div>
               </div>
               {/* Right Side Alert Information Display Area - Command Line Style */}

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../../components/Navbar'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowTrendUp, faGlobe, faChartLine, faCalendar, faClock } from '@fortawesome/free-solid-svg-icons'
+import { faGlobe, faChartLine, faCalendar, faClock } from '@fortawesome/free-solid-svg-icons'
 
 // 定义市场数据类型接口
 export interface MarketData {
@@ -120,7 +120,7 @@ const EarningsPage = () => {
             href="/trending" 
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-dark-light hover:bg-dark-light/80 text-white`}
           >
-            <FontAwesomeIcon icon={faArrowTrendUp} className="mr-2" /> Trending
+            <FontAwesomeIcon icon={faChartLine} className="mr-2" /> Trending
           </Link>
           <Link 
             href="/geopolitics" 
