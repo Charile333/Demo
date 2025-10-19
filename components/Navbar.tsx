@@ -70,10 +70,10 @@ const Navbar = ({ activeCategory = 'automotive', onCategoryChange }: NavbarProps
             {/* Logo with Image */}
             <button 
               onClick={() => handleCategoryClick('automotive')}
-              className="w-[250px] h-[70px] hover:opacity-80 transition-opacity"
+              className="w-full hover:opacity-80 transition-opacity"
               style={{overflow: 'visible', display: 'block', position: 'relative', padding: 0, border: 'none', background: 'transparent'}}
             >
-              <div className="relative w-full h-full flex items-center justify-center">
+              <div className="relative flex items-center justify-center">
                 <Image 
                   src="/image/LUMI (1).png" 
                   alt="LUMI Logo" 
