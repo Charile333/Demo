@@ -1,0 +1,54 @@
+{
+  "name": "duolume-market",
+  "version": "1.0.0",
+  "description": "DuoLume - Crypto Market Tools & Prediction Market Platform",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-regular-svg-icons": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.0",
+    "@polymarket/clob-client": "^4.22.7",
+    "@polymarket/real-time-data-client": "github:Polymarket/real-time-data-client",
+    "axios": "^1.12.2",
+    "chart.js": "^4.5.1",
+    "cryptocurrency-icons": "^0.18.1",
+    "date-fns": "^4.1.0",
+    "ethers": "^6.15.0",
+    "isomorphic-ws": "^5.0.0",
+    "lucide-react": "^0.545.0",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^18.3.1",
+    "recharts": "^3.3.0",
+    "swr": "^2.3.6",
+    "viem": "^2.38.2",
+    "wagmi": "^2.18.1",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8",
+    "eslint-config-next": "^14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5"
+  },
+  "keywords": [
+    "nextjs",
+    "tailwindcss",
+    "prediction-market",
+    "forecast"
+  ],
+  "author": "",
+  "license": "ISC"
+}
