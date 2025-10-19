@@ -67,26 +67,28 @@ const Navbar = ({ activeCategory = 'automotive', onCategoryChange }: NavbarProps
         <div className="flex items-center justify-between py-[0.375rem] border-b border-secondary/20 gap-4" style={{height: '80px'}}>
           {/* Left Side: Logo and Search - 固定在左上角 */}
           <div className="flex items-center flex-grow gap-4">
-            {/* Logo with Image */}
-            <button 
-              onClick={() => handleCategoryClick('automotive')}
-              className="w-full hover:opacity-80 transition-opacity"
-              style={{overflow: 'visible', display: 'block', position: 'relative', padding: 0, border: 'none', background: 'transparent'}}
-            >
-              <div className="relative flex items-center justify-center">
-                <Image 
-                  src="/image/LUMI (1).png" 
-                  alt="LUMI Logo" 
-                  width={250} 
-                  height={70}
-                  className="object-contain rounded-lg"
-                />
-                {/* SOON 浮动标签 */}
-                <div className="absolute top-1 -right-4 bg-purple-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-lg animate-float">
-                  SOON
+            {/* Logo with Image - 临时添加边框用于可视化容器和按钮边界 */}
+            <div style={{border: '2px dashed red', padding: '2px', display: 'inline-block'}}>
+              <button 
+                onClick={() => handleCategoryClick('automotive')}
+                className="w-full hover:opacity-80 transition-opacity"
+                style={{overflow: 'visible', display: 'block', position: 'relative', padding: 0, border: '2px solid blue', background: 'transparent'}}
+              >
+                <div className="relative flex items-center justify-center">
+                  <Image 
+                    src="/image/LUMI (1).png" 
+                    alt="LUMI Logo" 
+                    width={250} 
+                    height={70}
+                    className="object-contain rounded-lg"
+                  />
+                  {/* SOON 浮动标签 */}
+                  <div className="absolute top-1 -right-4 bg-purple-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-lg animate-float">
+                    SOON
+                  </div>
                 </div>
-              </div>
-            </button>
+              </button>
+            </div>
 
             {/* Search Bar */}
             <div className="relative flex-grow min-w-0 hidden lg:block">
