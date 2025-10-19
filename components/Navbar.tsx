@@ -70,16 +70,16 @@ const Navbar = ({ activeCategory = 'automotive', onCategoryChange }: NavbarProps
             {/* Logo with Image */}
             <button 
               onClick={() => handleCategoryClick('automotive')}
-              className="w-full max-w-[250px] h-[70px] hover:opacity-80 transition-opacity"
+              className="w-[250px] h-[70px] hover:opacity-80 transition-opacity"
               style={{overflow: 'visible', display: 'block', position: 'relative', padding: 0, border: 'none', background: 'transparent'}}
             >
               <div className="relative w-full h-full flex items-center justify-center">
                 <Image 
                   src="/image/LUMI (1).png" 
                   alt="LUMI Logo" 
-                  fill
-                  className="object-contain rounded-lg w-full h-full"
-                  sizes="100% 100%"
+                  width={250} 
+                  height={70}
+                  className="object-contain rounded-lg"
                 />
                 {/* SOON 浮动标签 */}
                 <div className="absolute top-1 -right-4 bg-purple-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-lg animate-float">
