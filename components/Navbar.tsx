@@ -83,7 +83,7 @@ const Navbar = ({ activeCategory = 'automotive', onCategoryChange }: NavbarProps
                       className="object-contain rounded-lg"
                     />
                   {/* SOON 浮动标签 */}
-                  <div className="absolute top-1 -right-4 bg-purple-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-lg animate-float">
+                  <div className="absolute top-1 -right-2 bg-purple-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-lg animate-float">
                     SOON
                   </div>
                 </div>
