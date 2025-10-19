@@ -67,12 +67,12 @@ const Navbar = ({ activeCategory = 'automotive', onCategoryChange }: NavbarProps
         <div className="flex items-center justify-between py-[0.375rem] border-b border-secondary/20 gap-4" style={{height: '80px'}}>
           {/* Left Side: Logo and Search - 固定在左上角 */}
           <div className="flex items-center flex-grow gap-4">
-            {/* Logo with Image - 修复点击区域问题，确保点击区域仅在边框内 */}
-            <div style={{width: '210px', height: '72px', border: '2px dashed red', padding: '2px', display: 'inline-block', position: 'relative'}}>
+            {/* Logo with Image - 保持210*72尺寸设置，移除临时边框 */}
+            <div style={{width: '210px', height: '72px', display: 'inline-block', position: 'relative'}}>
               <button 
                 onClick={() => handleCategoryClick('automotive')}
                 className="hover:opacity-80 transition-opacity"
-                style={{overflow: 'hidden', display: 'block', position: 'absolute', padding: 0, border: '2px solid blue', background: 'transparent', width: '206px', height: '68px', top: '2px', left: '2px'}}
+                style={{overflow: 'hidden', display: 'block', position: 'absolute', padding: 0, border: 'none', background: 'transparent', width: '210px', height: '72px', top: 0, left: 0}}
               >
                 <div className="relative flex items-center justify-center" style={{width: '100%', height: '100%'}}>
                     <Image 
