@@ -23,11 +23,20 @@ body:has([data-page="market"]) {
 
 /* Landing页面不需要白色背景，让动态背景显示 */
 body:has([data-page="landing"]) {
-  background-color: transparent;
+  background-color: #000000 !important;
+  background: #000000 !important;
 }
 
-/* Import Dynamic Background CSS - 放在后面以确保优先级 */
-@import url('/dynamic-bg.css');
+/* 确保动态背景canvas只在landing页面显示 */
+body:has([data-page="market"]) #cascading-waves-canvas,
+body:has([data-page="market"]) .wrap {
+  display: none !important;
+}
+
+body:not(:has([data-page="landing"])) #cascading-waves-canvas,
+body:not(:has([data-page="landing"])) .wrap {
+  display: none !important;
+}
 
 /* SOON 浮动动画 */
 @keyframes float {

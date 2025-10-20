@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import DynamicBackground from '../components/DynamicBackground'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -212,33 +211,48 @@ function Landing() {
     }
   }
 
-  // 添加 body class 和加载完整 CSS
+  // 添加 body class 和加载 Cascading Waves 背景
   useEffect(() => {
     document.body.classList.add('landing-page')
     
-    // 动态加载完整的 dynamic-bg.css
-    const link = document.createElement('link')
-    link.rel = 'stylesheet'
-    link.href = '/dynamic-bg.css'
-    link.id = 'dynamic-bg-css'
-    document.head.appendChild(link)
+    // 设置背景为纯黑色
+    document.body.style.setProperty('background', '#000000', 'important')
     
-    // 等待 CSS 加载后，确保背景渐变生效
-    link.onload = () => {
-      // 强制设置背景渐变（在 CSS 加载后）
-      document.body.style.setProperty('background', 'black', 'important')
-      document.body.style.setProperty('background-image', 'radial-gradient(circle at center, white 0%, #222 10%, black 60%)', 'important')
-    }
+    // 动态加载 cascading-waves.css
+    const cssLink = document.createElement('link')
+    cssLink.rel = 'stylesheet'
+    cssLink.href = '/cascading-waves.css'
+    cssLink.id = 'cascading-waves-css'
+    document.head.appendChild(cssLink)
+    
+    // 动态加载 cascading-waves.js
+    const script = document.createElement('script')
+    script.src = '/cascading-waves.js'
+    script.id = 'cascading-waves-js'
+    script.async = false // 改为同步加载以确保正确初始化
+    document.body.appendChild(script)
     
     return () => {
       document.body.classList.remove('landing-page')
       // 清理样式
       document.body.style.removeProperty('background')
-      document.body.style.removeProperty('background-image')
+      
       // 清理 CSS
-      const existingLink = document.getElementById('dynamic-bg-css')
-      if (existingLink) {
-        existingLink.remove()
+      const existingCss = document.getElementById('cascading-waves-css')
+      if (existingCss) {
+        existingCss.remove()
+      }
+      
+      // 清理 JS 和 canvas
+      const existingScript = document.getElementById('cascading-waves-js')
+      if (existingScript) {
+        existingScript.remove()
+      }
+      
+      // 移除 canvas 元素
+      const canvas = document.getElementById('cascading-waves-canvas')
+      if (canvas) {
+        canvas.remove()
       }
     }
   }, [])
@@ -253,16 +267,14 @@ function Landing() {
     >
       {/* 左上角Logo */}
       <div className="absolute top-4 left-4 z-30">
-        <img src="/images/Dute2.png" alt="DuoLume Logo" className="w-16 h-16 filter grayscale" />
+        <img src="/image/lumi1 (1).png" alt="LUMI Logo" className="w-16 h-16" />
       </div>
-
-      <DynamicBackground />
 
       <main className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="text-center w-full">
           {/* Logo（黑白配色，无彩色） */}
           <div className="mb-10 flex justify-center">
-            <h1 className="text-5xl md:text-6xl font-black text-white text-glow tracking-tight">DuoLume</h1>
+            <h1 className="text-5xl md:text-6xl font-black text-white text-glow tracking-tight">LUMI</h1>
           </div>
 
           {/* 核心 "SOON" 区域（视觉焦点，黑白高对比） */}
@@ -292,12 +304,12 @@ function Landing() {
               <div className="flex flex-col items-center relative">
                 <div className="w-4 h-4 rounded-full bg-white border-2 border-gray-600 absolute top-6 -translate-y-1/2"></div>
                 <div className="text-white font-medium mt-8 mb-1">2026-Q2</div>
-                <div className="text-gray-400 text-sm text-center max-w-[180px]">Uncertainty Quantification</div>
+                <div className="text-gray-400 text-sm text-center max-w-[180px]">Market Trend Forecasting</div>
                 </div>
               <div className="flex flex-col items-center relative">
                 <div className="w-4 h-4 rounded-full bg-white border-2 border-gray-600 absolute top-6 -translate-y-1/2"></div>
                 <div className="text-white font-medium mt-8 mb-1">2026-Q3</div>
-                <div className="text-gray-400 text-sm text-center max-w-[120px]">Crypto Quant</div>
+                <div className="text-gray-400 text-sm text-center max-w-[120px]">Soon</div>
               </div>
             </div>
           </div>
@@ -314,7 +326,7 @@ function Landing() {
               <div className="flex flex-col gap-6 flex-1">
                 <div className="bg-[#1a1a1a]/50 rounded-lg p-5 hover:bg-[#1a1a1a]/80 transition-colors">
                   <div className="text-3xl text-white mb-3">📊</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">DuoLume</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">LUMI</h3>
                   <p className="text-gray-300/70 text-sm">Advanced trading platform with real-time analytics</p>
             </div>
                 <div className="bg-[#1a1a1a]/50 rounded-lg p-5 hover:bg-[#1a1a1a]/80 transition-colors">
@@ -385,7 +397,7 @@ function Landing() {
 
       {/* 底部信息（浅灰文本，降低视觉权重） */}
       <footer className="relative z-20 text-center text-gray-300/40 text-sm p-8">
-        <p>© 2025 DuoLume. All rights reserved.</p>
+        <p>© 2025 LUMI. All rights reserved.</p>
         <div className="flex items-center justify-center gap-4 mt-3">
           <a href="#" className="hover:text-white transition-colors">🐦</a>
           <a href="#" className="hover:text-white transition-colors">✈️</a>
