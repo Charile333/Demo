@@ -269,7 +269,7 @@ function Landing() {
           <div className="animate-breathe max-w-4xl mx-auto">
             <p className="text-6xl md:text-9xl font-black text-white mb-6 text-glow">SOON</p>
             <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-              The next-gen crypto market tool—focuses on on-chain Black Swan risk signals, quantitative uncertainty measurement, betting platform and <br /> Prediction Market Platform.
+              Crypto market tool—focuses on on-chain Black Swan risk signals, quantitative uncertainty measurement, betting platform and <br/> Prediction Market Platform.
             </p>
           </div>
         </div>
@@ -287,7 +287,7 @@ function Landing() {
               <div className="flex flex-col items-center relative">
                 <div className="w-4 h-4 rounded-full bg-white border-2 border-gray-600 absolute top-6 -translate-y-1/2"></div>
                 <div className="text-white font-medium mt-8 mb-1">2026-Q1</div>
-                <div className="text-gray-400 text-sm text-center max-w-[180px]">LUMI 趋势预测</div>
+                <div className="text-gray-400 text-sm text-center max-w-[180px]">Prediction Market</div>
                 </div>
               <div className="flex flex-col items-center relative">
                 <div className="w-4 h-4 rounded-full bg-white border-2 border-gray-600 absolute top-6 -translate-y-1/2"></div>
